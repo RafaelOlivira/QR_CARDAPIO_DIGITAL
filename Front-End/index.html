@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c1917">
+  <title>Brasa &amp; Bun – Cardápio digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#cardapio">Ir para o cardápio</a>
+
+<header class="topbar">
+  <a class="brand" href="#topo">Brasa &amp; Bun</a>
+  <nav aria-label="Seções">
+    <ul class="topnav">
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#pedido">Pedido</a></li>
+      <li><a href="#pontos">Pontos</a></li>
+      <li><a href="#promocoes">Promoções</a></li>
+      <li><a href="#cadastro">Cadastro</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="topo">
+
+  <!-- Identificação da mesa -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__text">
+      <h1 id="hero-title">Hambúrguer na brasa, direto na sua mesa.</h1>
+      <p>Escolha no cardápio, acompanhe o preparo e junte pontos a cada pedido.</p>
+      <a class="btn" href="#cardapio">Ver cardápio</a>
+    </div>
+    <div class="ticket" role="group" aria-label="Mesa vinculada ao QR Code">
+      <span class="ticket__label">Você está na mesa</span>
+      <strong class="ticket__num">12</strong>
+      <span class="ticket__note">Vinculada ao QR Code lido</span>
+    </div>
+  </section>
+
+  <!-- Cardápio -->
+  <section id="cardapio" class="section" aria-labelledby="t-cardapio">
+    <h2 id="t-cardapio">Cardápio</h2>
+    <nav class="cats" aria-label="Categorias">
+      <a href="#burgers">Hambúrgueres</a>
+      <a href="#acompanhamentos">Acompanhamentos</a>
+      <a href="#bebidas">Bebidas</a>
+    </nav>
+
+    <h3 id="burgers" class="cat-title">Hambúrgueres</h3>
+    <div class="grid">
+      <article class="card card--feature">
+        <div class="card__media"><img src="assets/img/Double-Smash-Cheddar.jpg" alt="Hamburguer-Bacon" width="50%"></div>
+        <div class="card__body">
+          <span class="tag">Mais pedido</span>
+          <h4>Double Smash Cheddar</h4>
+          <p>Dois smash de 90 g, cheddar derretido, picles e maionese defumada no pão brioche.</p>
+          <div class="card__foot"><span class="price">R$ 38,90</span><span class="pts">+39 pts</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media"><img src="assets/img/Brasa-classic.jpg" alt="Brasa-Classic" width="50%"></div>
+        <div class="card__body">
+          <h4>Brasa Classic</h4>
+          <p>Blend de 160 g na chapa, queijo prato, alface, tomate e molho da casa.</p>
+          <div class="card__foot"><span class="price">R$ 32,90</span><span class="pts">+33 pts</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media"><img src="assets/img/Bacon-Inferno.jpg" alt="Bacon-Inferno" width="50%"></div>
+        <div class="card__body">
+          <span class="tag tag--hot">Picante</span>
+          <h4>Bacon Inferno</h4>
+          <p>Hambúrguer de 160 g, bacon crocante, jalapeño e geleia de pimenta.</p>
+          <div class="card__foot"><span class="price">R$ 41,90</span><span class="pts">+42 pts</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media"><img src="assets/img/Veggie-Grill.webp" alt="Veggie-Grill" width="50%"></div>
+        <div class="card__body">
+          <h4>Veggie Grill</h4>
+          <p>Burger de grão-de-bico e beterraba, rúcula, tomate seco e maionese de ervas.</p>
+          <div class="card__foot"><span class="price">R$ 34,90</span><span class="pts">+35 pts</span></div>
+        </div>
+      </article>
+    </div>
+
+    <h3 id="acompanhamentos" class="cat-title">Acompanhamentos</h3>
+    <div class="grid">
+      <article class="card card--row">
+        <div class="card__media card__media--sm" aria-hidden="true">
+          <img src="assets/img/batata-rustica.jpg" alt="Imagem da batata rustica">
+        </div>   
+        <div class="card__body">
+          <h4>Batata rústica</h4>
+          <p>Com casca, alecrim e sal defumado.</p>
+          <div class="card__foot"><span class="price">R$ 18,90</span><span class="pts">+19 pts</span></div>
+        </div>
+      </article>
+      <article class="card card--row">
+        <div class="card__media card__media--sm" aria-hidden="true">
+          <img src="assets/img/onion-ring.jpg" alt="Imagem da Onion ring">
+        </div>   
+        <div class="card__body">
+          <h4>Onion rings</h4>
+          <p>Empanadas na hora, com molho barbecue.</p>
+          <div class="card__foot"><span class="price">R$ 19,90</span><span class="pts">+20 pts</span></div>
+        </div>
+      </article>
+    </div>
+
+    <h3 id="bebidas" class="cat-title">Bebidas</h3>
+    <div class="grid">
+      <article class="card card--row">
+        <div class="card__media card__media--sm" aria-hidden="true">
+          <img src="assets/img/limonada.jpg" alt="Imagem da limonada">
+        </div> 
+        <div class="card__body">
+          <h4>Limonada da casa</h4>
+          <p>Limão siciliano e hortelã, 500 ml.</p>
+          <div class="card__foot"><span class="price">R$ 12,90</span><span class="pts">+13 pts</span></div>
+        </div>
+      </article>
+      <article class="card card--row">
+        <div class="card__media card__media--sm" aria-hidden="true">
+          <img src="assets/img/milkshake-chocolate.jpg" alt="">
+        </div> 
+        <div class="card__body">
+          <h4>Milkshake de chocolate</h4>
+          <p>Sorvete artesanal e calda de cacau, 400 ml.</p>
+          <div class="card__foot"><span class="price">R$ 21,90</span><span class="pts">+22 pts</span></div>
+        </div>
+      </article>
+    </div>
+    <p class="demo-note">Demonstração visual: produtos, preços e pontos são fictícios e o pedido ainda não é enviado.</p>
+  </section>
+
+  <!-- Acompanhamento do pedido -->
+  <section id="pedido" class="section" aria-labelledby="t-pedido">
+    <h2 id="t-pedido">Seu pedido</h2>
+    <div class="panel">
+      <p class="panel__head">Pedido #0482 · Mesa 12</p>
+      <ol class="tracker">
+        <li class="step step--done"><span class="step__dot"></span><span class="step__name">Recebido</span><span class="step__time">19:42</span></li>
+        <li class="step step--current" aria-current="step"><span class="step__dot"></span><span class="step__name">Em preparo</span><span class="step__time">Previsão 19:58</span></li>
+        <li class="step"><span class="step__dot"></span><span class="step__name">Pronto</span><span class="step__time">Aguardando</span></li>
+      </ol>
+      <ul class="order">
+        <li><span>1× Double Smash Cheddar</span><span>R$ 38,90</span></li>
+        <li><span>1× Batata rústica</span><span>R$ 18,90</span></li>
+        <li><span>2× Limonada da casa</span><span>R$ 25,80</span></li>
+        <li class="order__total"><span>Total</span><span>R$ 83,60</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pontos -->
+  <section id="pontos" class="section" aria-labelledby="t-pontos">
+    <h2 id="t-pontos">Seus pontos</h2>
+    <div class="panel points">
+      <p class="points__balance"><strong>1.240</strong> pontos</p>
+      <label for="meta" class="points__goal">Faltam 260 pontos para um hambúrguer grátis</label>
+      <progress id="meta" value="1240" max="1500">83%</progress>
+      <details class="how" open>
+        <summary>Como funciona o programa</summary>
+        <ul>
+          <li>Cada R$ 1,00 em compras vale 1 ponto.</li>
+          <li>Com 1.500 pontos você troca por um hambúrguer clássico.</li>
+          <li>Clientes cadastrados ganham pontos em dobro às terças.</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- Promoções -->
+  <section id="promocoes" class="section" aria-labelledby="t-promo">
+    <h2 id="t-promo">Promoções exclusivas</h2>
+    <div class="grid">
+      <article class="promo">
+        <span class="tag">Combo</span>
+        <h3>Combo Brasa</h3>
+        <p>Brasa Classic, batata rústica e limonada.</p>
+        <p class="promo__price"><s>R$ 64,70</s> <strong>R$ 52,90</strong></p>
+      </article>
+      <article class="promo">
+        <span class="tag">Para dois</span>
+        <h3>Dupla Smash</h3>
+        <p>Dois Double Smash Cheddar e onion rings para dividir.</p>
+        <p class="promo__price"><s>R$ 97,70</s> <strong>R$ 79,90</strong></p>
+      </article>
+      <article class="promo promo--member">
+        <span class="tag tag--member">Só para cadastrados</span>
+        <h3>Milkshake em dobro</h3>
+        <p>Peça um milkshake e ganhe o segundo toda quinta-feira.</p>
+        <a class="btn btn--ghost" href="#cadastro">Quero participar</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Cadastro -->
+  <section id="cadastro" class="section" aria-labelledby="t-cadastro">
+    <h2 id="t-cadastro">Entre para o programa de fidelidade</h2>
+    <form class="panel form" action="#cadastro" method="get">
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?" required>
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+      </div>
+      <label class="check">
+        <input type="checkbox" name="ofertas" checked>
+        <span>Quero receber ofertas por e-mail.</span>
+      </label>
+      <button class="btn" type="submit">Cadastrar e ganhar pontos</button>
+      <p class="demo-note">Protótipo: o envio será ligado ao back-end futuramente.</p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Brasa &amp; Bun · Mesa 12 · Dados fictícios para demonstração</p>
+</footer>
+<script src="javascript.js"></script>
+</body>
+</html>
