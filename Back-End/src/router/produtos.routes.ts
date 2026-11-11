@@ -1,5 +1,5 @@
 import express = require("express");
-import crypto = require("node:crypto");
+import produtoController = require("../controllers/produto.controller");
 const router = express.Router(); // Agrupamento de rotas
 
 
@@ -11,9 +11,7 @@ interface Produto{
 
 const produtosSalvo:Produto[] = [];
 
-router.get("/",(req,res)=>{
-    res.status(200).json(produtosSalvo);
-});
+router.get("/", produtoController.listarProdutos);
 
 router.get("/:id",(req,res)=>{
     const uuid = req.params.id;
@@ -22,13 +20,7 @@ router.get("/:id",(req,res)=>{
     return res.status(200).send(produto);
 });
 
-router.post("/",(req,res)=>{
-    const produto = req.body;
-    const uuid = crypto.randomUUID();
-    const novo_produto = {id:uuid,nome:produto.nome,preco:produto.preco}
-    produtosSalvo.push(novo_produto );
-    res.status(201).json(novo_produto);
-});
+router.post("/",produtoController.salvarProduto);
  
 router.put("/:id",(req,res)=>{
     const uuid = req.params.id;
